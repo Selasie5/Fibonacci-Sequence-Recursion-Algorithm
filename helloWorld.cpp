@@ -14,7 +14,7 @@ using namespace std;
 // }
 //Defining the Fibonacci function with recursion with memoization
 //Defining an array to store already calculated values
-int F[51];//the number in thos array defines the maximum vlaue for whose Fibonacci digit we can find 
+int F[51];//the number in thos array defines the maximum value for whose Fibonacci digit we can find 
 int Fib(int n)
 {
     if (n <= 1)
