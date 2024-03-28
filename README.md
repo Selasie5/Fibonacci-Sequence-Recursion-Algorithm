@@ -13,3 +13,4 @@ In the code , we further went on to implement the functionality, where every ele
  By control flow, if the value of the given number in that array is not equal to -1, then it means it has a value which has been stored as its Fibonacci value
  Otherwise, the fibonacci value of that number has not beenn calculated . Hence it is calculated and stored
  This will prevent the recalculation of already calculated values thereby reducing the time complexity of the program
+![Screenshot 2024-03-28 142718](https://github.com/Selasie5/Fibonacci-Sequence-Recursion-Algorithm/assets/73952162/27813551-d125-4639-81fc-f0ff229248e3)
