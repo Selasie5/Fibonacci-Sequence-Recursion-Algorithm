@@ -6,7 +6,7 @@ Based on this rule written in our recursive function, we are going to have this 
 However, it is noticed from the recursion tree that values that have already been calculated are being repeated. This therefore causes the program to run slower for larger values.
 The solution to this is to implement memoization into the recursive function to prevent the calculation of already calculated values
 
-**--Inmplementing Memoiszation Into The  Recursive Function--**
+**--Implementing Memoiszation Into The  Recursive Function--**
 In the recursive function, we defined an array that will contain the already calculated values of the Fibonacci sequence.
 In the code , we further went on to implement the functionality, where every element in the array that has not been calculated will
  have a value of  -1;
