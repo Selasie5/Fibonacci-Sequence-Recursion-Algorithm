@@ -1,28 +1,51 @@
 #include <iostream>
-
 using namespace std;
-//Defining the fibonacci function using recursion without memoization
-int fib(int n)
+
+// //Defining the fibonacci function with recursion without memoization
+// int Fib(int n)
+// {
+//     if(n<=1)
+//     {
+//         return n;
+//     }
+//     else{
+//         return Fib(n-1)+Fib(n-2);
+//     }
+// }
+//Defining the Fibonacci function with recursion with memoization
+//Defining an array to store already calculated values
+int F[51];
+int Fib(int n)
 {
-    if(n <= 1)
+    if (n <= 1)
+    {
         return n;
-    return
-        fib(n-1) + fib(n-2);
+    }
+    else
+    {
+        //once the value has already been calculated, it is returned from the array
+        if(F[n] != -1)
+        {
+            return F[n];
+        }
+        //Otherwise it is calculated and stored in the array
+        F[n] = Fib(n-1)+ Fib(n-2);
+        return F[n];
+    }
 }
-
-
 int main()
 {
-    string name = "";
-    cout << "Hello there, what is your name ?";
-    cin >> name;
-    cout << "Hello, " << name << "!Welcome to the Fibonacci series generator\n";
-     int num = 0;
-    cout << "Enter the number whose Fibonacci series you want to generate: ";
-    cin >> num;
-    int result = fib(num); //Calling the fib function with the user input
-    cout << result  << endl;
-    return 0;
+    for( int i=0;i<51;i++)
+    {
+        F[i]= -1;
+    }
+     int n;
+     string name;
+        cout << "Hello there, what is your name ?" << endl;
+        cin  >> name;
+    cout << "Hello, " << name << " !" << endl << "Welcome to my Fibonacci series  generator" << endl;
+        cout << "Please enter the value whose Fibonacci number you would want to generate" << endl;
+     cin  >> n;
+     cout << "The fibonacci value of " << n << " is "  << Fib(n) << endl;
+     return 0;
 }
-
-
